@@ -1,12 +1,11 @@
 # HackerRank-Queen-s-Attack-II
-HackerRank-Queen-s-Attack-II
+There are two different approaches for a solution.
 
-There are two different approach for solution. 
+One of them is calculating all of the possible moves and ignoring all of the obstacles in all directions.  When obstacle is entered, one must calculate new moves that count just for that direction(it is important to Consider whether there are any earlier obstacles in that direction ).
 
-One of them is that calculating all possible moves ignoring all of obstacles for all directions, And when obstacle is entered, calculate new moves count just for that direction(Consider, whether there is any earlier obstacle at that direction ). 
+The other solution  is that after storing all obstacles in the hashtable, one must increase the queen's position one by one in every direction and increase the movement count. When you come across an obstacle, break loop and change the queen's direction.
 
-Other one is that after storing all obstacles in hashtable, increase queen's position one by one for every directions and increase movement count. When you come across an obstacle, break loop and change queen's direction.
+I have chosen the first one because it has just one for-loop. We can calculate movement count when we are taking obstacle inputs. In contrast, the second solution requires that , after we take an obstacle we have to turn another for-loop to calculate movements.
 
-I have chose the first one. Because first one has just one for-loop.We can calculate movements count when we are taking obstacle inputs. For secound one, after we take obstacle we have to turn another for-loop for calculating movements. 
+Actually, I implemented both of the solutions and calculated performance issues. The first solution has better value for time and ram size.
 
-Acually, I implemented both of solutions. And I calculated performance issues. First solution has better value for time and ram size.
